@@ -1,0 +1,21 @@
+extends:
+  - airbnb-base
+settings:
+  import/core-modules: ["events", "process", "path", "crypto"]
+rules:
+  arrow-parens: "off"
+  arrow-body-style: "off"
+  comma-dangle: ["error", "never"]
+  class-methods-use-this: "off"
+  dot-notation: "off"
+  operator-linebreak: "off"
+  no-console: "off"
+  no-new: "off"
+  no-underscore-dangle: "off"
+  no-unsafe-finally: "off"
+  no-param-reassign: ["error", { "props": false }]
+  no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]
+  semi: [2, "never"]
+globals:
+  navigator: true
+  window: true
