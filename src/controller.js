@@ -4,11 +4,15 @@ const JwtTokenService = require('./jwt_token_service')
 const router = new Router()
 
 router.get('/token', async ctx => {
-  ctx.body = await JwtTokenService.getInstance().getToken()
+  const jwtToken = await JwtTokenService.getInstance().getToken()
+
+  ctx.body = { jwtToken }
 })
 
 router.get('/update_token', async ctx => {
-  ctx.body = await JwtTokenService.getInstance().updateToken()
+  const jwtToken = await JwtTokenService.getInstance().updateToken()
+
+  ctx.body = { jwtToken }
 })
 
 module.exports = router
